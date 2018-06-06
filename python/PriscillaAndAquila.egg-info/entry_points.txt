@@ -1,0 +1,4 @@
+[console_scripts]
+aquila = priscillaandaquila.main:main
+priscilla = priscillaandaquila.main:main
+

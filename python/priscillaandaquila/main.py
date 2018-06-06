@@ -26,7 +26,8 @@ def main():
     else:
         raise Exception("Choose an argument!")
     for verse_ref in verse_refs:
-        extrapolated_verse_ref = bible.extrapolate_abbriv(verse_ref.strip())
+        extrapolated_verse_ref = bible.extrapolate_abbriv(verse_ref.strip(),
+                                                          raise_exp = False)
         # Splitting verse to book, chapter, verse
         reg = re.compile('(([0-9]*) *[\D]+) *([0-9]*):([0-9]*)')
         m = reg.match(extrapolated_verse_ref)

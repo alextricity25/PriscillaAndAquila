@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "PriscillaAndAquila",
-    version = "0.0.1a3",
+    version = "0.0.1a4",
     author = "Miguel Alex Cantu",
     author_email = "miguel.can2@gmail.com",
     description = ("A command line tool that performs a lookup of Bible verse"
@@ -24,7 +24,7 @@ setup(
     install_requires = ['diyr'],
     long_description=read('README.rst'),
     url = 'https://github.com/alextricity25/PriscillaAndAquila',
-    download_url = 'https://github.com/alextricity25/PriscillaAndAquila/archive/0.0.1a3.tar.gz',
+    download_url = 'https://github.com/alextricity25/PriscillaAndAquila/archive/0.0.1a4.tar.gz',
     entry_points = {
         'console_scripts': [
             'priscilla = priscillaandaquila.main:main',

@@ -41,6 +41,15 @@ def main():
                                        m.group(4).strip())
             # Strip off identifier returned by "verse_lookup"
             verse = re.sub('[0-9]*\.', '', verse).strip()
+
+            if parsed_args.references_first:
+                print "{} {}:{} - {}".format(
+                    m.group(1).strip(),
+                    m.group(3).strip(),
+                    m.group(4).strip(),
+                    verse)
+                exit()
+
             print "{} - {} {}:{}".format(
                 verse,
                 m.group(1).strip(),

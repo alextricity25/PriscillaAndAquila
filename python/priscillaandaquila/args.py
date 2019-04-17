@@ -29,5 +29,12 @@ parser.add_argument(
     required = False
 )
 
+parser.add_argument(
+    '-r',
+    '--references-first',
+    action = 'store_true',
+    required = False
+)
+
 def get_parser():
     return parser

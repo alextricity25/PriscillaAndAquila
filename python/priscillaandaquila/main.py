@@ -48,13 +48,12 @@ def main():
                     m.group(3).strip(),
                     m.group(4).strip(),
                     verse)
-                exit()
-
-            print "{} - {} {}:{}".format(
-                verse,
-                m.group(1).strip(),
-                m.group(3).strip(),
-                m.group(4).strip())
+            else:
+                print "{} - {} {}:{}".format(
+                    verse,
+                    m.group(1).strip(),
+                    m.group(3).strip(),
+                    m.group(4).strip())
 
 def _expand_verse_range(reg, verse_ref):
     """

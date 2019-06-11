@@ -23,7 +23,7 @@ if ! [[ -f setup.py ]]; then
     exit
 fi
 # Update version number in setup.py
-sed "s/a[0-9][0-9]/a${NEXT_VERSION}/g" setup.py -i
+sed -r "s/a[0-9]+/a${NEXT_VERSION}/g" setup.py -i
 
 # Remove build and dist directories
 
@@ -36,7 +36,7 @@ python setup.py bdist_wheel
 # Making git tag
 git add setup.py
 git commit -m "Prepare setup,py for Alpha Release ${NEXT_VERSION}"
-git push
+git push origin master
 git tag 0.0.1a${NEXT_VERSION} -m "Alpha Release ${NEXT_VERSION}"
 git push --tags
 
